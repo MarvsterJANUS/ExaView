@@ -1,0 +1,371 @@
+/* ═══════════════════════════════════════════
+   ABOUT PAGE
+═══════════════════════════════════════════ */
+
+/* ── PAGE HEADER ── */
+.about-header {
+  position: relative;
+  height: 58vh;
+  min-height: 420px;
+  overflow: hidden;
+}
+
+.about-header-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+  filter: brightness(0.62);
+}
+
+.about-header-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 4rem 14rem;
+}
+
+.about-header-overlay h1 {
+  font-size: clamp(2.75rem, 5.5vw, 5.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+.about-header-overlay p {
+  font-size: 0.8rem;
+}
+
+/* ── MISSION SECTION ── */
+.about-mission {
+  background: #0b0336;
+  padding: 8rem 14rem;
+}
+
+.about-mission-inner {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.about-mission-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-mission-text .section-eyebrow {
+  margin-bottom: 0;
+  font-size: 0.8rem;
+}
+
+.about-mission-text h2 {
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin: 0;
+}
+
+.about-mission-body {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.about-mission-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.mission-stat {
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stat-num {
+  font-size: clamp(1.75rem, 2.8vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #fff;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 400;
+}
+
+/* ── PRODUCT SECTION ── */
+.about-product {
+  background: #060b12;
+  padding: 8rem 14rem;
+}
+
+.about-product-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.about-product-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-product-text .section-eyebrow {
+  margin-bottom: 0;
+  font-size: 0.8rem;
+}
+
+.about-product-text .cta-btn {
+  align-self: flex-start;
+}
+
+.about-product-text h2 {
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.about-product-text p {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.about-product-drone {
+  position: relative;
+}
+
+.about-product-drone img {
+  width: 100%;
+  height: auto;
+  display: block;
+  pointer-events: none;
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+}
+
+.callout-lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.callout-lines line {
+  stroke: rgba(255, 255, 255, 0.25);
+  stroke-width: 0.5;
+}
+
+.callout-dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  background: transparent;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.callout-label {
+  position: absolute;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* ── VALUES SECTION ── */
+.about-values-section {
+  background: #0b0336;
+  padding: 8rem 14rem;
+}
+
+.about-values-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.about-values-header .section-eyebrow {
+  margin-bottom: 0;
+  font-size: 0.8rem;
+}
+
+.about-values-header h2 {
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin: 0;
+}
+
+.about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.value-card {
+  padding: 2.75rem 2.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-top: 2px solid rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.02);
+  transition: background 0.3s ease, transform 0.3s ease;
+  cursor: default;
+}
+
+.value-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-4px);
+}
+
+.value-num {
+  display: block;
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: rgba(255, 255, 255, 0.07);
+  margin-bottom: 2rem;
+}
+
+.value-card h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.value-card p {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ── FULL-WIDTH IMAGE BREAK ── */
+.about-img-break {
+  width: 100%;
+  height: 44vh;
+  overflow: hidden;
+}
+
+.about-img-break img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  display: block;
+  filter: brightness(0.72);
+}
+
+/* ── CTA SECTION ── */
+.about-cta-section {
+  background: #060b12;
+  padding: 8rem 3rem;
+}
+
+.about-cta-inner {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-cta-inner h2 {
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin: 1.25rem 0 1rem;
+}
+
+.about-cta-inner p {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 2.5rem;
+}
+
+.about-cta-inner .section-eyebrow {
+  font-size: 0.8rem;
+}
+
+.about-cta-inner .intro-actions {
+  justify-content: center;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .about-header-overlay {
+    padding: 3rem 1.5rem;
+  }
+
+  .about-mission {
+    padding: 5rem 1.5rem;
+  }
+
+  .about-mission-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-product-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+.about-mission,
+  .about-product,
+  .about-values-section {
+    padding: 5rem 1.5rem;
+  }
+
+  .about-values-section {
+    padding: 5rem 1.5rem;
+  }
+
+  .about-values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-cta-section {
+    padding: 5rem 1.5rem;
+  }
+
+  .about-cta-inner {
+    text-align: left;
+  }
+
+  .about-cta-inner .intro-actions {
+    justify-content: flex-start;
+  }
+}

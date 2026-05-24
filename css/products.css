@@ -1,0 +1,411 @@
+/* ═══════════════════════════════════════════
+   PRODUCTS PAGE
+═══════════════════════════════════════════ */
+
+/* ── PRODUCT STAGE ── */
+#product-stage {
+  background: #060b12;
+  overflow: hidden;
+}
+
+.product-stage-hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 6rem 14rem 0;
+  min-height: 460px;
+}
+
+.product-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -48%);
+  font-size: clamp(9rem, 26vw, 26rem);
+  font-weight: 700;
+  letter-spacing: -0.06em;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.11);
+  line-height: 0.8;
+  user-select: none;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.product-drone-wrap {
+  position: relative;
+  z-index: 2;
+  width: min(700px, 65%);
+}
+
+.product-drone-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 60px 100px rgba(60, 100, 255, 0.08));
+}
+
+.product-stage-headline {
+  padding: 2rem 14rem 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.product-stage-headline h2 {
+  font-size: clamp(3rem, 6.5vw, 6.5rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin: 0 0 1.5rem;
+}
+
+.product-stage-headline > p {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.45);
+  max-width: 520px;
+}
+
+/* ── COLOR SELECTOR ── */
+.color-selector {
+  position: absolute;
+  right: 14rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  z-index: 3;
+}
+
+.color-selector-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  margin-bottom: 0.25rem;
+}
+
+.color-swatch {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+  background: none;
+  padding: 0;
+}
+
+.color-swatch:hover {
+  transform: scale(1.2);
+}
+
+.color-swatch.is-active {
+  border-color: rgba(255, 255, 255, 0.85);
+  transform: scale(1.15);
+}
+
+.color-swatch--black { background: #1c1c1e; }
+.color-swatch--white { background: #e8e8e6; }
+
+.color-swatch-tip {
+  position: absolute;
+  right: calc(100% + 0.75rem);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.color-swatch:hover .color-swatch-tip {
+  opacity: 1;
+}
+
+
+/* ── SPECS TICKER ── */
+.product-ticker {
+  overflow: hidden;
+  padding: 2.75rem 0;
+  margin-bottom: 2rem;
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker-scroll 30s linear infinite;
+  will-change: transform;
+}
+
+.ticker-set {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+  padding-right: 3.5rem;
+}
+
+.ticker-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.ticker-val {
+  font-size: clamp(1.9rem, 2.6vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: #fff;
+  line-height: 1;
+}
+
+.ticker-lbl {
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.ticker-dot {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.15);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track { animation: none; }
+}
+
+/* ── SHOWCASE ── */
+#product-showcase {
+  background: #060b12;
+}
+
+.showcase-img-wrap {
+  width: 100%;
+  position: relative;
+  overflow: visible;
+}
+
+.showcase-img-clip {
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.showcase-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 45%;
+  filter: brightness(0.68);
+  display: block;
+}
+
+.showcase-drone-cutout {
+  position: absolute;
+  bottom: -34%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: auto;
+  z-index: 10;
+  pointer-events: none;
+
+}
+
+.showcase-content {
+  padding: 10rem 14rem 8rem;
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.showcase-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.showcase-left .section-eyebrow {
+  font-size: 0.8rem;
+  margin-bottom: 0;
+}
+
+.showcase-left h2 {
+  font-size: clamp(2.5rem, 4.5vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin: 0;
+}
+
+.showcase-right-img {
+  display: flex;
+  align-items: center;
+}
+
+.showcase-right-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── OPTICS & TECH SECTIONS ── */
+#product-optics {
+  background: #0b0336;
+  padding: 8rem 14rem;
+}
+
+#product-tech {
+  background: #060b12;
+  padding: 8rem 14rem;
+}
+
+.product-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.split-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.split-text .section-eyebrow {
+  margin-bottom: 0;
+  font-size: 0.8rem;
+}
+
+.split-text h2 {
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin: 0;
+}
+
+.split-text p {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.split-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#product-optics .split-media {
+  margin-left: -14rem;
+}
+
+#product-optics .split-media img {
+  width: 100%;
+}
+
+.split-media--drawing img {
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+}
+
+/* ── TECH SPECS TABLE ── */
+.tech-specs {
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  margin-top: 0.5rem;
+}
+
+.tech-spec-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.tech-spec-name {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.38);
+}
+
+.tech-spec-val {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+
+/* ── CTA OVERRIDE ── */
+.products-cta {
+  background: #0b0336;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .product-stage-hero {
+    padding: 5rem 1.5rem 0;
+    min-height: 260px;
+  }
+
+  .product-drone-wrap {
+    width: 85%;
+  }
+
+  .product-watermark {
+    font-size: 32vw;
+  }
+
+  .product-stage-headline {
+    padding: 2rem 1.5rem 5rem;
+  }
+
+  .showcase-content {
+    padding: 4rem 1.5rem 5rem;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .showcase-body {
+    padding-top: 0;
+    align-self: auto;
+  }
+
+  #product-optics,
+  #product-tech {
+    padding: 5rem 1.5rem;
+  }
+
+  .product-split {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  #product-optics .split-media {
+    order: -1;
+  }
+}

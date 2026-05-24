@@ -1,0 +1,108 @@
+/* ═══════════════════════════════════════════
+   LEGAL PAGES (Impressum, Datenschutz, Bildrechte)
+═══════════════════════════════════════════ */
+
+/* ── HEADER ── */
+.legal-header {
+  background: #060b12;
+  padding: 10rem 14rem 5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.legal-header .section-eyebrow {
+  margin-bottom: 1.25rem;
+}
+
+.legal-header h1 {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin: 0;
+}
+
+/* ── CONTENT ── */
+#legal-content {
+  background: #060b12;
+  padding: 6rem 14rem 8rem;
+}
+
+.legal-inner {
+  max-width: 860px;
+}
+
+/* ── DISCLAIMER ── */
+.legal-disclaimer {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 1.5rem 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.legal-disclaimer p {
+  font-size: 0.875rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+/* ── BLOCKS ── */
+.legal-block {
+  margin-bottom: 3.5rem;
+  padding-bottom: 3.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.legal-block:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.legal-block h2 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #fff;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.16em;
+}
+
+.legal-block p,
+.legal-block address {
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 0.75rem;
+}
+
+.legal-block p:last-child,
+.legal-block address:last-child {
+  margin-bottom: 0;
+}
+
+.legal-block a {
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.legal-block a:hover {
+  color: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .legal-header {
+    padding: 8rem 1.5rem 4rem;
+  }
+
+  #legal-content {
+    padding: 4rem 1.5rem 5rem;
+  }
+}
