@@ -28,7 +28,11 @@ Das Ziel des Projekts war die Erstellung einer vollständigen, mehrsprachig stru
 
 ## Live-Demo & Öffnen
 
-Da es sich um ein statisches Projekt handelt, ist kein Server erforderlich.
+Die Website ist online erreichbar unter:
+
+**[https://marvsterjanus.github.io/ExaView/](https://marvsterjanus.github.io/ExaView/)**
+
+Alternativ kann die Website lokal geöffnet werden — da es sich um ein statisches Projekt handelt, ist kein Server erforderlich.
 
 ```
 index.html im Browser öffnen
