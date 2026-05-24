@@ -401,121 +401,6 @@ img {
   border-color: rgba(255, 255, 255, 0.35);
 }
 
-/* ═══════════════════════════════════════════
-   RESPONSIVE
-═══════════════════════════════════════════ */
-@media (max-width: 768px) {
-  #main-nav {
-    padding: 1.25rem 1.5rem;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-  .nav-social {
-    display: none;
-  }
-
-  #drone-img {
-    width: 380px;
-  }
-
-  #hero-logo-img {
-    width: min(340px, 85vw);
-  }
-
-  .section-content {
-    padding: 8rem 1.5rem 5rem;
-  }
-
-  /* Hide oversized absolute drone image — primary overflow culprit */
-  .intro-drone-deco {
-    display: none;
-  }
-
-  #section-intro {
-    padding: 4rem 1.5rem;
-  }
-
-  .blog-post,
-  .blog-post--alt {
-    grid-template-columns: 1fr;
-    min-height: 0;
-  }
-
-  /* Remove absolute-positioning technique — just a normal image block */
-  .blog-post-img {
-    height: 220px;
-  }
-
-  .blog-post-img img {
-    position: relative;
-    inset: auto;
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-  }
-
-  /* Alt post: image on top, text below */
-  .blog-post--alt .blog-post-img { order: 0; }
-  .blog-post--alt .blog-post-text { order: 1; }
-
-  .blog-post-text {
-    padding: 2rem 1.5rem;
-    overflow-wrap: break-word;
-  }
-
-  #section-blog {
-    padding: 5rem 1.5rem;
-  }
-
-  .footer-top {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2rem;
-  }
-
-  .footer-nav {
-    flex-wrap: wrap;
-    gap: 1rem 1.5rem;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
-  }
-
-  .newsletter-input {
-    width: 180px;
-  }
-
-  .contact-inner,
-  .inquiry-inner {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    padding: 5rem 1.5rem;
-  }
-
-  .inquiry-intro {
-    position: static;
-  }
-
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-hero-overlay {
-    padding: 3rem 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  #drone-img {
-    width: 280px;
-  }
-}
 
 /* ═══════════════════════════════════════════
    NAV — SOCIAL ICONS
@@ -1175,6 +1060,233 @@ img {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+/* ═══════════════════════════════════════════
+   BURGER MENU — hidden on desktop
+═══════════════════════════════════════════ */
+.nav-burger      { display: none; }
+.nav-mobile-menu { display: none; }
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE — must be last so mobile rules
+   override all desktop styles above
+═══════════════════════════════════════════ */
+@media (max-width: 768px) {
+  #main-nav {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-social {
+    display: none;
+  }
+
+  /* ── BURGER BUTTON ── */
+  .nav-burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    z-index: 1001;
+    position: relative;
+  }
+
+  .nav-burger span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: rgba(255, 255, 255, 0.75);
+    transition: transform 0.3s ease, opacity 0.2s ease;
+    transform-origin: center;
+  }
+
+  .nav-burger[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+  }
+  .nav-burger[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-burger[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+  }
+
+  /* ── MOBILE MENU OVERLAY ── */
+  .nav-mobile-menu {
+    display: flex;
+    position: fixed;
+    inset: 0;
+    background: #060b12;
+    z-index: 999;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .nav-mobile-menu.is-open {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .mobile-nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .mobile-nav-links a {
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .mobile-nav-links a:hover {
+    color: #fff;
+  }
+
+  .mobile-nav-social {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .mobile-nav-social .social-icon {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  #drone-img {
+    width: 380px;
+  }
+
+  #hero-logo-img {
+    width: min(340px, 85vw);
+  }
+
+  .section-content {
+    padding: 8rem 1.5rem 5rem;
+  }
+
+  .intro-drone-deco {
+    display: none;
+  }
+
+  #section-intro {
+    padding: 4rem 1.5rem;
+  }
+
+  /* Blog posts: single column, image on top */
+  .blog-post,
+  .blog-post--alt {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .blog-post-img {
+    height: 220px;
+  }
+
+  .blog-post-img img {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+
+  .blog-post--alt .blog-post-img { order: 0; }
+  .blog-post--alt .blog-post-text { order: 1; }
+
+  .blog-post-text {
+    padding: 2rem 1.5rem;
+    overflow-wrap: break-word;
+  }
+
+  #section-blog {
+    padding: 5rem 1.5rem;
+  }
+
+  #site-footer {
+    padding: 3rem 1.5rem;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .footer-nav {
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .footer-copy {
+    white-space: normal;
+  }
+
+  .newsletter-form {
+    width: 100%;
+  }
+
+  .newsletter-input {
+    flex: 1;
+    width: auto;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .contact-inner,
+  .inquiry-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 5rem 1.5rem;
+  }
+
+  .inquiry-intro {
+    position: static;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-hero-overlay {
+    padding: 3rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #drone-img {
+    width: 280px;
+  }
 }
 
 .inquiry-success {
