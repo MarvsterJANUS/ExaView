@@ -368,4 +368,11 @@
   .about-cta-inner .intro-actions {
     justify-content: flex-start;
   }
+
+  /* Hide callout annotations — keep only the drone drawing */
+  .callout-lines,
+  .callout-dot,
+  .callout-label {
+    display: none;
+  }
 }

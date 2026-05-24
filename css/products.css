@@ -370,10 +370,25 @@
   .product-stage-hero {
     padding: 5rem 1.5rem 0;
     min-height: 260px;
+    flex-direction: column;
+    align-items: center;
   }
 
   .product-drone-wrap {
     width: 85%;
+  }
+
+  .color-selector {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.5rem 0 2rem;
+  }
+
+  .color-swatch-tip {
+    display: none;
   }
 
   .product-watermark {
