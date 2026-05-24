@@ -379,4 +379,12 @@
   .post-related-grid {
     grid-template-columns: 1fr;
   }
+
+  .kunden-hero-img {
+    content: url('../assets/images/drone-flying-dark-atmosphere.jpg');
+  }
+
+  .post1-hero-img {
+    content: url('../assets/images/drone-flying-over-city-actionshot.jpg');
+  }
 }

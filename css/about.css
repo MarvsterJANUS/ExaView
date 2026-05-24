@@ -369,6 +369,14 @@
     justify-content: flex-start;
   }
 
+  .about-hero-img {
+    content: url('../assets/images/about-us-hero-banner-mobile.jpg');
+  }
+
+  .contact-hero-img {
+    content: url('../assets/images/drone-flying-over-landscape-actionshot-mobile.jpg');
+  }
+
   /* Hide callout annotations — keep only the drone drawing */
   .callout-lines,
   .callout-dot,
