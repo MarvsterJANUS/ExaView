@@ -422,5 +422,11 @@
 
   #product-optics .split-media {
     order: -1;
+    margin-left: -1.5rem;
+    width: calc(100% + 1.5rem);
+  }
+
+  .showcase-drone-cutout {
+    display: none;
   }
 }
